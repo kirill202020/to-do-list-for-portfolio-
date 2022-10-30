@@ -30,7 +30,7 @@ const addLocal = () =>{
 btnAdd.addEventListener('click', () =>{
     const taskValue = input.value
     if (taskValue) {
-        task.push(new TaskObj(taskValue))
+        task.unshift(new TaskObj(taskValue))
         addLocal()
         fillList()
     }
