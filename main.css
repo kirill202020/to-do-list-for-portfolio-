@@ -54,12 +54,15 @@ h1{
 }
 
 
+
 .task__text{
     border-right: 2px solid #3450a1;
     border-left: 2px solid #3450a1;
     flex-basis: 90%;
+    border-radius: 0;
     padding: 15px;
     font-size: 21px;
+    word-wrap: anywhere;
 }
 
 
@@ -71,7 +74,7 @@ h1{
 }
 
 .task__delete{
-    flex-basis: 5%;
+    flex-basis: 12%;
     border-top-right-radius: 50%;
     border-bottom-right-radius: 50%;
     border: none;
@@ -141,7 +144,7 @@ h1{
 }
 
 .task__complete{
-    flex-basis: 5%;
+    flex-basis: 12%;
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
     border: none;
@@ -153,8 +156,8 @@ h1{
 
 .task__complete::before{
     content: '';
-    width: 15px;
-    height: 15px;
+    width: 1.6vw;
+    height: 1.6vw;
     position: absolute;
     border-radius: 100%;
     border: 2px solid #0a4ce4;
@@ -175,8 +178,61 @@ h1{
     gap: 15px;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 500px) {
     body{
         padding: 30px 20px;
+    }
+
+    h1{
+        font-size: 18px;
+    }
+
+    .task__text{
+        border-right: 2px solid #3450a1;
+        border-left: 2px solid #3450a1;
+        flex-basis: 90%;
+        padding: 5px;
+        font-size: 10px;
+    }
+
+    #task{
+        width: 70%;
+        height: 50%;
+        padding: 20;
+    }
+    
+    #task::placeholder{
+        font-size: 10px;
+    }
+
+    .btn__add{
+        width: 36px;
+        height: 36px;
+        border-radius: 100%;
+        border: none;
+        margin-left: 5px;
+        font-size: 10px;
+        padding-top: 7px;
+        padding-left: 7px;
+    }
+
+    .btn__add__img{
+        width: 20px;
+        height: 20px;
+    }
+
+    .task__delete{
+        padding-top: 50px;
+        width: 1vw;
+        height: 1vw;
+    }
+
+}
+
+
+@media screen and (min-width: 1024px) {
+    .task__complete::before{
+        width: 15px;
+        height: 15px;
     }
 }
